@@ -41,3 +41,4 @@
 #
 #  >>> Escriba su codigo a partir de este punto <<<
 #
+sed 's/\([0-9]\)\/\([0-9]\)\//0\1\/0\2\//g; s/\/20/\//g; s/\([0-9][0-9]\)\/\([0-9][0-9]\)\/\([0-9][0-9]\)/20\3-\2-\1/g; s/,/./g; s/;/,/g; s/,,/,\\N,/g; s/n/\N/g; s/,N,/,null,/g; s/,N/,null/g; s/null/\\N/g; s/,,/,\\N,/g; s/,\s*$/,\\N/g; s/a/A/g; s/c/C/g; s/[a-z]/\U&/g;' data.csv > output.csv
